@@ -1,0 +1,43 @@
+<div class="back">
+  <ion-header>
+    <ion-toolbar>
+      <b class="profiles">
+        <ion-title>MY PROFILE </ion-title>
+      </b>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-avatar class="pexels" slot="start">
+          <ion-img [src]="user.picture.thumbnail"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <b class="Name">Name</b>
+          <div class="Umut">{{user.name.first}}, {{user.dob.age}}</div>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <div class="Bitmap-Copy-2">
+        <h3 class="Location">Location</h3>
+        <div class="clr">
+          {{user.location.city}} , {{user.location.state}} ,
+          {{user.location.country}} , {{user.location.timezone.description}}
+        </div>
+      </div>
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <h3 class="Gender">Gender</h3>
+        <div class="clr">{{user.gender}}</div>
+        <ion-icon name="male-female-outline"> </ion-icon>
+      </ion-col>
+      <ion-col>
+        <h3 class="Age">Age</h3>
+        <div class="clr">{{user.dob.age}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-content>
+</div>
